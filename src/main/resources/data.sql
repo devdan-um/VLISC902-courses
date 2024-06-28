@@ -1,0 +1,1 @@
+insert into CURSO(NOMBRE) VALUES ('Matematicas');
