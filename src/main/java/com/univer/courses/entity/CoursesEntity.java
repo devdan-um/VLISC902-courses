@@ -12,6 +12,17 @@ public class CoursesEntity {
     @Column(name = "NOMBRE")
     private String name;
 
+    @Column(name = "GRADO")
+    private  Integer grado;
+
+    public Integer getGrado() {
+        return grado;
+    }
+
+    public void setGrado(Integer grado) {
+        this.grado = grado;
+    }
+
     public int getId() {
         return id;
     }

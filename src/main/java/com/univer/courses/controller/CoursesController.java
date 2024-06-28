@@ -14,7 +14,7 @@ public class CoursesController {
     @Autowired
     private CoursesRepository studentRepository;
 
-    @GetMapping("student/register")
+    @GetMapping("curses/register")
     public String student(){
         return "register";
 
