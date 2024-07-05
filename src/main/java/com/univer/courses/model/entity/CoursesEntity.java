@@ -1,9 +1,6 @@
 
-package com.univer.courses.entity;
-import com.univer.courses.model.reponse.ClaseResponse;
+package com.univer.courses.model.entity;
 import jakarta.persistence.*;
-
-import java.util.List;
 
 @Entity
 @Table(name= "CURSO")
