@@ -1,5 +1,5 @@
 
-package com.univer.courses.entity;
+package com.univer.courses.model.entity;
 import jakarta.persistence.*;
 
 @Entity
