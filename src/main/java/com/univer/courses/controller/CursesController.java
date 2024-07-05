@@ -1,7 +1,7 @@
 package com.univer.courses.controller;
 
 
-import com.univer.courses.model.entity.CoursesEntity;
+import com.univer.courses.entity.CoursesEntity;
 import com.univer.courses.model.request.CursesRequest;
 import com.univer.courses.repository.CursesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
