@@ -1,9 +1,12 @@
 package com.univer.courses.controller;
 
 import com.univer.courses.entity.CoursesEntity;
+import com.univer.courses.model.reponse.CursesResponse;
 import com.univer.courses.model.request.CursesRequest;
 import com.univer.courses.repository.CursesRepository;
+import com.univer.courses.service.CursesServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,16 +18,19 @@ public class CursesRestController {
     @Autowired
     private CursesRepository cursesRepository;
 
-    @GetMapping("api/univer/curso/{id}")
-            public String curso(@PathVariable String id){
-        Optional<CoursesEntity> entity=
-        this.cursesRepository.findById(Integer.parseInt(id));
+    @Autowired
+    private CursesServices cursesServices;
 
-        if(entity.isPresent()){
-            return entity.get().getName();
+    @GetMapping("api/univer/curso/{id}")
+            public ResponseEntity curso(@PathVariable String id){
+
+        CursesResponse response = this.cursesServices.getAllCurses(Integer.parseInt(id));
+
+        if(response == null){
+            return new ResponseEntity<>(response, HttpStatus.OK);
 
         }else{
-            return "No hay Registros con ese identificador";
+            return new ResponseEntity<>("No se tiene registro de ese ID", HttpStatus.NO_CONTENT);
         }
 
 
