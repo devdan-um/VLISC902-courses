@@ -15,8 +15,6 @@ import java.util.Optional;
 @RestController
 public class CursesRestController {
 
-    @Autowired
-    private CursesRepository cursesRepository;
 
     @Autowired
     private CursesServices cursesServices;
@@ -39,13 +37,8 @@ public class CursesRestController {
     @PostMapping("/api/univer/curso")
     public ResponseEntity guardado(@RequestBody CursesRequest request){
 
-        CoursesEntity entity = new CoursesEntity();
-        entity.setName(request.getName());
-        entity.setGrado(request.getGrado());
+        CursesResponse response = this.cursesServices.saveCurses(request);
 
-        this.cursesRepository.save(entity);
-
-        return ResponseEntity.ok("Se guardo de manera correcta");
-
+        return new ResponseEntity(response, HttpStatus.CREATED);
     }
 }
