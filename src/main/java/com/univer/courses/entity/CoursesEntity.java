@@ -2,14 +2,14 @@
 package com.univer.courses.entity;
 import jakarta.persistence.*;
 
-@Entity
-@Table(name= "CURSO")
+//@Entity
+//@Table(name= "CURSO")
 public class CoursesEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id_clase")
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Column(name = "Id_clase")
     private int id;
-    @Column(name = "NOMBRE")
+    //@Column(name = "NOMBRE")
     private String name;
 
     public int getId() {
