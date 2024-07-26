@@ -24,6 +24,7 @@ public class CursoService {
         if(entity.isPresent()){
             response.setNombre(entity.get().getNombre());
             response.setDescripcion(entity.get().getDescripcion());
+            response.setCuatrimestre(entity.get().getCuatrimestre());
             return response;
         } else {
             return null;
@@ -39,6 +40,7 @@ public class CursoService {
             CursoResponse c = new CursoResponse();
             c.setNombre(entity.getNombre());
             c.setDescripcion(entity.getDescripcion());
+            c.setCuatrimestre(entity.getCuatrimestre());
             response.add(c);
         });
 

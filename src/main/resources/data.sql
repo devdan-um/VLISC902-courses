@@ -1,14 +1,14 @@
 insert into
-    curso (DESCRIPCION, NOMBRE)
-values ('Descripcion del objetivo del primer cuatrimestre ', 'Primero');
+    curso (DESCRIPCION, NOMBRE, CUATRIMESTRE)
+values ('Descripcion del objetivo del primer cuatrimestre ', 'Primero', 1);
 
 insert into
-    curso (DESCRIPCION, NOMBRE)
-values ('Descripcion del objetivo del segundo cuatrimestre ', 'Segundo');
+    curso (DESCRIPCION, NOMBRE, CUATRIMESTRE)
+values ('Descripcion del objetivo del segundo cuatrimestre ', 'Segundo', 2);
 
 insert into
-    curso (DESCRIPCION, NOMBRE)
-values ('Descripcion del objetivo del noveno cuatrimestre ', 'Noveno');
+    curso (DESCRIPCION, NOMBRE, CUATRIMESTRE)
+values ('Descripcion del objetivo del noveno cuatrimestre ', 'Noveno', 9);
 
 
 
